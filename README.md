@@ -68,7 +68,7 @@ For Gradle project put jar with doclet to `libs` folder and add next task to `bu
 
     task generateApiDocs(type: Javadoc) {
       source sourceSets.main.allJava
-      classpath = configurations.compile
+      classpath = configurations.runtimeClasspath
       options.encoding 'UTF-8'
       destinationDir = file("build/generated-files")
       options.addStringOption("doclet", "com.microsoft.doclet.DocFxDoclet")

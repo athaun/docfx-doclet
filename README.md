@@ -76,6 +76,9 @@ For Gradle project put jar with doclet to `libs` folder and add next task to `bu
       dependsOn build
     }
 
+fix for gradle sending invalid arguments to doclet resulting in invalid arguments -notimestamp and -notitle
+https://github.com/gradle/gradle/issues/11898
+
 And run doclet using next command: `gradle generateApiDocs`  
 In result generated files will be placed into `./build/generated-files` folder  
 
